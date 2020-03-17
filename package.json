@@ -1,0 +1,14 @@
+{
+  "name": "mochaasync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --delay *TestSuite.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^7.1.0"
+  }
+}
