@@ -1,18 +1,13 @@
-const mocha = require("mocha");
-
 let data = [];
 
 // trigger the initialization
-const result = async function() {
+const testInitialize = async function() {
     console.log("init...");
     // do something
-    await sleep(5);     
+    await sleep(5000);     
     data = [ "test 1"];
-
-    console.log("run...");
-    mocha.run();
     console.log("init done");
-}();;
+}();
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -20,5 +15,8 @@ function sleep(ms) {
 
 module.exports = {
     testIsEnable: function(testId) { return data.includes(testId)},
+    testInitialize: function() { 
+        require('deasync').loopWhile(function() {return data.length == 0 ;});
+    } 
 }
 

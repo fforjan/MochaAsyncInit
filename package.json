@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --delay *TestSuite.js"
+    "test": "mocha  *TestSuite.js",
+    "test-first": "mocha  *TestSuite.js --fgrep first"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "deasync": "^0.1.19",
     "mocha": "^7.1.0"
   }
 }
